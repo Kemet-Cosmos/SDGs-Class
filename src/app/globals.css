@@ -1,5 +1,10 @@
 @import "tailwindcss";
-
-body {
-  @apply mt-20;
+@theme{
+  --color-Green-1:#7ea67c
+}
+ body{
+  @apply mt-32 lg:mt-0  max-w-6xl mx-auto
+ }
+section {
+  @apply px-5 md:px-10 lg:px-16 min-h-screen ;
 }
