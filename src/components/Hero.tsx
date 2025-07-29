@@ -7,7 +7,7 @@ import { Animate, FadeDown, FadeLeft, FadeRight, FadeUp } from "@/Animation";
 const MotionImage = motion(Image);
 const Hero = () => {
   return (
-    <section className="  lg:flex items-center gap-10">
+    <section className=" min-h-screen lg:flex items-center gap-10">
       <div className="w-full lg:w-2/4">
         <div className="h-60 w-80 relative flex justify-end items-center bg -red-500">
           <motion.h1
@@ -40,7 +40,7 @@ const Hero = () => {
               width: "100%",
               height: "100%",
             }}
-            transition={{duration:0.2}}
+            transition={{ duration: 0.2 ,delay:0.2 }}
             className="absolute top-2/4 left-2/4 -translate-2/4  bg-Green-1 -z-10"
           />
           This website will be your guide for being Aware and Responsible for
