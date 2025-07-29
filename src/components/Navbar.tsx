@@ -10,7 +10,7 @@ const Navbar = () => {
       <nav className=" py-3 flex flex-col md:flex-row gap-5 items-center md:justify-evenly lg:justify-between max-w-5xl mx-auto md:h-16 bg-white ">
         <h1 className="text-3xl font-semibold">SDG’s Class</h1>
 
-        <div className="space-x-5 text-2xl flex">
+        <div className="space-x-5 text-lg md:text-2xl flex">
           {mainLinks.map((item, i) => (
             <Link href={item.href} key={i} className="">
               {item.title}

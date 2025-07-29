@@ -6,5 +6,5 @@
   @apply mt-32 lg:mt-0  max-w-6xl mx-auto
  }
 section {
-  @apply px-5 md:px-10 lg:px-16  ;
+  @apply px-5 md:px-10 lg:px-16 min-h-screen h-fit ;
 }

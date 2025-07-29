@@ -8,12 +8,12 @@ const MotionImage = motion(Image);
 
 const OverView = () => {
   return (
-    <section className=" lg:flex  gap-10">
+    <section className=" flex flex-col lg:flex-row gap-10 overflow-x-hidden">
       <div>
         <motion.h1
           {...FadeUp}
           {...ViewPort}
-          className="relative text-6xl font-semibold mb-10"
+          className="relative text-6xl font-semibold lg:mb-20"
         >
           SDGs Overview
           <motion.div className="absolute top-10 -left-2 lg:-left-8 h-14 w-80 bg-Green-1 -z-10" />
@@ -22,7 +22,7 @@ const OverView = () => {
           {...FadeLeft}
           {...ViewPort}
           transition={{ duration: 0.2, delay: 0.2 }}
-          className="relative p-4 rounded-2xl text-xl"
+          className="relative p-4 rounded-2xl text-2xl"
         >
           <motion.div
             viewport={{ once: true, amount: 0.5 }}
@@ -65,7 +65,7 @@ const OverView = () => {
           {...FadeLeft}
           {...ViewPort}
           transition={{ duration: 0.2, delay: 0.2 }}
-          className="relative p-4 rounded-2xl text-xl"
+          className="relative p-4 rounded-2xl text-2xl"
         >
           <motion.div
             viewport={{ once: true, amount: 0.5 }}
