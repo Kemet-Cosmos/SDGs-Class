@@ -21,7 +21,7 @@ const ClimateChange = () => {
           atmosphere, trapping heat like a thick blanket.
         </motion.div>
         <motion.h1 {...FadeLeft} {...Animate} transition={{delay:0.2}} className="font-semibold">
-          But that's just the beginning of the story.
+          But that’s just the beginning of the story.
         </motion.h1>
         <motion.div {...FadeLeft} {...Animate} transition={{delay:0.3}}>
           As the planet heats up, Greenland is losing over{" "}
