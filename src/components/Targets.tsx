@@ -2,14 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import {
-  Animate,
-  FadeDown,
-  FadeLeft,
-  FadeRight,
-  FadeUp,
-  ViewPort,
-} from "@/Animation";
+import { Animate, FadeRight, ViewPort } from "@/Animation";
 const MotionImage = motion(Image);
 
 const Targets = () => {

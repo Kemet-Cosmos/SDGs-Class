@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ViewPort, FadeLeft, FadeRight } from "@/Animation";
+import { Animate, FadeLeft, FadeRight } from "@/Animation";
 const MotionImage = motion(Image);
 
 const SDG_13_Mean = () => {
@@ -10,7 +10,7 @@ const SDG_13_Mean = () => {
     <section className="min-h-fit flex flex-col lg:flex-row gap-10 overflow-x-hidden ">
       <MotionImage
         {...FadeLeft}
-        {...ViewPort}
+        {...Animate}
         src="/Climate_change.svg"
         alt="SDG 13 climate Change"
         width={2000}
@@ -21,7 +21,7 @@ const SDG_13_Mean = () => {
       <div className="w-full lg:w-2/4">
         <motion.h1
           {...FadeRight}
-          {...ViewPort}
+          {...Animate}
           className="relative text-5xl font-semibold mb-5 lg:mb-10"
         >
           <div className="absolute top-5 left-24 w-3/6 h-8 bg-Green-1 -z-10" />
@@ -29,7 +29,7 @@ const SDG_13_Mean = () => {
         </motion.h1>
         <motion.div
           {...FadeRight}
-          {...ViewPort}
+          {...Animate}
           className="relative text-xl ml-10 mb-5 lg:ml-4"
         >
           <div className="absolute top-0 -left-10 w-8 h-8 rounded-full bg-Green-1 " />
@@ -45,7 +45,7 @@ const SDG_13_Mean = () => {
 
         <motion.div
           {...FadeRight}
-          {...ViewPort}
+          {...Animate}
           className="relative text-xl ml-10 lg:ml-4"
         >
           <div className="absolute top-0 -left-10 w-8 h-8 rounded-full bg-Green-1 " />

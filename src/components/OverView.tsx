@@ -2,7 +2,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { FadeLeft, FadeUp, ViewPort } from "@/Animation";
+import { FadeLeft, FadeUp, Animate } from "@/Animation";
 
 const MotionImage = motion(Image);
 
@@ -12,21 +12,20 @@ const OverView = () => {
       <div>
         <motion.h1
           {...FadeUp}
-          {...ViewPort}
-          className="relative text-6xl font-semibold lg:mb-20"
+          {...Animate}
+          className="relative text-6xl font-semibold mb-14"
         >
           SDGs Overview
           <motion.div className="absolute top-10 -left-2 lg:-left-8 h-14 w-80 bg-Green-1 -z-10" />
         </motion.h1>
         <motion.div
           {...FadeLeft}
-          {...ViewPort}
+          {...Animate}
           transition={{ duration: 0.2, delay: 0.2 }}
           className="relative p-4 rounded-2xl text-2xl"
         >
           <motion.div
-            viewport={{ once: true, amount: 0.5 }}
-            whileInView={{
+            animate={{
               width: "100%",
               height: "100%",
             }}
@@ -55,7 +54,7 @@ const OverView = () => {
       <div>
         <MotionImage
           {...FadeLeft}
-          {...ViewPort}
+          {...Animate}
           src="/OverView_image.jpeg"
           alt="Image"
           width={1000}
@@ -63,13 +62,12 @@ const OverView = () => {
         />
         <motion.div
           {...FadeLeft}
-          {...ViewPort}
+          {...Animate}
           transition={{ duration: 0.2, delay: 0.2 }}
           className="relative p-4 rounded-2xl text-2xl"
         >
           <motion.div
-            viewport={{ once: true, amount: 0.5 }}
-            whileInView={{
+            animate={{
               width: "100%",
               height: "100%",
             }}
