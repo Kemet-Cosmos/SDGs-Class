@@ -65,7 +65,7 @@ const Imagine = () => {
           />
         </motion.div>
         <motion.div {...FadeUp} {...ViewPort} className="text-green-700">
-          Let's find out what the SDGs truly are!
+          Let’s find out what the SDGs truly are!
         </motion.div>
         <MotionLink
           {...FadeRight}

@@ -2,21 +2,22 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { Animate, FadeRight, ViewPort } from "@/Animation";
+import { Animate, FadeLeft, FadeRight, FadeUp, ViewPort } from "@/Animation";
 const MotionImage = motion(Image);
 
 const Targets = () => {
   return (
-    <section className="flex flex-col lg:flex-row ">
-      <div className="w-full lg:w-[30%]">
+    <section className="flex flex-col lg:flex-row gap-4">
+      <div className="w-full lg:w-[35%]">
         <motion.h1
-          {...FadeRight}
+          {...FadeLeft}
           {...ViewPort}
           className="relative text-5xl font-semibold mb-5  "
         >
+          <motion.div className="absolute top-10 -left-2 lg:-left-8 h-14 w-80 bg-Green-1 -z-10" />
           Why is it important to learn about climate change?
         </motion.h1>
-        <p className="text-lg">
+        <motion.p {...FadeLeft} {...ViewPort} className="text-lg">
           It is already occurring and is real: Students are growing up in a
           world where climate change is a current reality rather than a far-off
           future. It relates to daily life: Our everyday activities have an
@@ -28,47 +29,60 @@ const Targets = () => {
           responsibility, climate change transcends national boundaries. So, on
           a global level, learning about it promotes empathy, critical thinking,
           and teamwork.
-        </p>
+        </motion.p>
       </div>
       <MotionImage
-        initial={{ x: 100, opacity: 0 }}
+        {...FadeUp}
         {...Animate}
         src="/Save_earth.jpg"
         alt="Save earth"
         width={500}
         height={500}
         draggable={false}
-        className="w-full lg:w-[40%]"
+        className="w-full h-80 lg:h-[650px] lg:w-[30%] object-cover"
       />
-      <div className="w-full lg:w-[30%]">
+      <div className="w-full lg:w-[35%]">
         <motion.h1
           {...FadeRight}
           {...ViewPort}
-          className="relative text-5xl font-semibold mb-5 lg:mb-10"
+          className="relative text-4xl font-semibold  w-full h-20 flex items-center justify-center mb-5 "
         >
+          <motion.div
+            animate={{
+              width: "100%",
+              height: "100%",
+            }}
+            transition={{ duration: 0.2, delay: 0.2 }}
+            className="w-0 h-0 absolute top-2/4 left-2/4 -translate-2/4  bg-Green-1 -z-10"
+          />
           “ SDG 13 Targets: .. ”
         </motion.h1>
-        <ul>
-          <li>
-            1) Strengthen resilience and adaptive capacity to climate-related
+        <ul className="space-y-5 text-xl">
+          <motion.li {...FadeRight} {...ViewPort}>
+            <span className="text-Green-1 text-2xl font-bold">1)</span>{" "}
+            Strengthen resilience and adaptive capacity to climate-related
             hazards and natural disasters.
-          </li>
-          <li>
-            2) Integrate climate change measures into national policies,
+          </motion.li>
+          <motion.li {...FadeRight} {...ViewPort}>
+            <span className="text-Green-1 text-2xl font-bold">2)</span>{" "}
+            Integrate climate change measures into national policies,
             strategies, and planning.
-          </li>
-          <li>
-            3) Improve education, awareness, and capacity on climate change
-            mitigation, adaptation, and early warning.
-          </li>
-          <li>
-            4) Implement the commitment to mobilize $100 billion annually to
+          </motion.li>
+          <motion.li {...FadeRight} {...ViewPort}>
+            <span className="text-Green-1 text-2xl font-bold">3)</span> Improve
+            education, awareness, and capacity on climate change mitigation,
+            adaptation, and early warning.
+          </motion.li>
+          <motion.li {...FadeRight} {...ViewPort}>
+            <span className="text-Green-1 text-2xl font-bold">4)</span>{" "}
+            Implement the commitment to mobilize $100 billion annually to
             support developing countries.
-          </li>
-          <li>
-            5) Promote capacity-building and climate planning in least developed
-            countries and small island states.
-          </li>
+          </motion.li>
+          <motion.li {...FadeRight} {...ViewPort}>
+            <span className="text-Green-1 text-2xl font-bold">5)</span> Promote
+            capacity-building and climate planning in least developed countries
+            and small island states.
+          </motion.li>
         </ul>
       </div>
     </section>

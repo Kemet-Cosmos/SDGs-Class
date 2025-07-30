@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function page() {
   return (
-    <main className='lg:mt-20'>
+    <main className='lg:mt-20 space-y-20'>
       <SDG_13_Mean/>
       <Targets/>
     </main>
