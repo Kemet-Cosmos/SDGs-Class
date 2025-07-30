@@ -20,15 +20,10 @@ const ClimateInfo = () => {
           pollution have released vast amounts of greenhouse gases into the
           atmosphere, trapping heat like a thick blanket.
         </motion.div>
-        <motion.h1
-          {...FadeLeft}
-          {...ViewPort}
-          transition={{ delay: 0.2 }}
-          className="font-semibold"
-        >
+        <motion.h1 {...FadeLeft} {...ViewPort} className="font-semibold">
           But that’s just the beginning of the story.
         </motion.h1>
-        <motion.div {...FadeLeft} {...ViewPort} transition={{ delay: 0.3 }}>
+        <motion.div {...FadeLeft} {...ViewPort}>
           As the planet heats up, Greenland is losing over{" "}
           <span className="font-semibold"> 279 billion tons </span> of ice every
           year. Down south, Antarctica is shedding{" "}
@@ -42,19 +37,14 @@ const ClimateInfo = () => {
           since 1880, and accelerating faster than ever in the past 20 years.
         </motion.div>
 
-        <motion.div
-          {...FadeLeft}
-          {...ViewPort}
-          transition={{ delay: 0.4 }}
-          className="relative"
-        >
+        <motion.div {...FadeLeft} {...ViewPort} className="relative">
           <div className="absolute top-0 -left-10 w-8 h-8 rounded-full bg-Green-1 " />
           And with that, the oceans swell and push against coastlines. Storms
           become fiercer. Droughts stretch longer. Crops fail. Forests burn.
           People flee.
         </motion.div>
 
-        <motion.div {...FadeLeft} {...ViewPort} transition={{ delay: 0.5 }}>
+        <motion.div {...FadeLeft} {...ViewPort}>
           This isn’t science fiction. It’s happening right now. And that’s why
           the world came together to establish the{" "}
           <span className="font-semibold">
@@ -70,7 +60,6 @@ const ClimateInfo = () => {
         <MotionImage
           {...FadeRight}
           {...ViewPort}
-          transition={{ delay: 0.6 }}
           src="/Earth.jpg"
           alt="Earth image"
           width={2000}
@@ -81,7 +70,6 @@ const ClimateInfo = () => {
         <motion.h2
           {...FadeRight}
           {...ViewPort}
-          transition={{ delay: 0.7 }}
           className="text-5xl font-medium"
         >
           So in this lesson, we’ll become part of that mission, exploring and
