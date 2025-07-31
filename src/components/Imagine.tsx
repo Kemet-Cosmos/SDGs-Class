@@ -67,17 +67,19 @@ const Imagine = () => {
         <motion.div {...FadeUp} {...ViewPort} className="text-green-700">
           Let’s find out what the SDGs truly are!
         </motion.div>
-        <MotionLink
-          {...FadeRight}
-          {...ViewPort}
-          whileHover={{ translateX: 5, scale: 1.05 }}
-          whileTap={{ scale: 1 }}
-          href="/about"
-          className="font-bold text-2xl bg-Green-1 px-2 w-fit flex items-center gap-2 ml-auto"
-        >
-          {" "}
-          NEXT <FaArrowRight size={20} />{" "}
-        </MotionLink>
+        <div className="w-full flex justify-end my-5">
+          <MotionLink
+            {...FadeUp}
+            {...ViewPort}
+            whileHover={{ translateX: 5, scale: 1.05 }}
+            whileTap={{ scale: 1 }}
+            href="/about"
+            className="font-bold text-2xl bg-Green-1 px-2 w-fit flex items-center gap-2  "
+          >
+            {" "}
+            NEXT <FaArrowRight size={20} />{" "}
+          </MotionLink>
+        </div>
       </div>
     </section>
   );
