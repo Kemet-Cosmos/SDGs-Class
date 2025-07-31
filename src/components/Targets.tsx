@@ -8,7 +8,7 @@ const MotionImage = motion(Image);
 const Targets = () => {
   return (
     <section className="flex flex-col lg:flex-row gap-4">
-      <div className="w-full lg:w-[35%]">
+      <div className="w-full lg:w-[35%] overflow-hidden">
         <motion.h1
           {...FadeLeft}
           {...ViewPort}
@@ -41,7 +41,7 @@ const Targets = () => {
         draggable={false}
         className="w-full h-80 lg:h-[650px] lg:w-[30%] object-cover"
       />
-      <div className="w-full lg:w-[35%]">
+      <div className="w-full lg:w-[35%] overflow-hidden">
         <motion.h1
           {...FadeRight}
           {...ViewPort}

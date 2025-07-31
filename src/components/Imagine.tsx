@@ -45,7 +45,7 @@ const Imagine = () => {
           Even the songs of birds became just a memory.
         </motion.div>
       </div>
-      <div className="text-2xl w-full lg:w-2/4">
+      <div className="text-2xl w-full lg:w-2/4 overflow-hidden">
         <motion.div {...FadeRight} {...ViewPort} className="mb-20">
           And after decades, humanity no longer wondered about the future… but
           about survival! The planet did not die, but it was no longer the home

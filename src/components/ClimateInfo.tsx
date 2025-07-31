@@ -8,7 +8,7 @@ const MotionImage = motion(Image);
 const ClimateInfo = () => {
   return (
     <section className="min-h-fit flex flex-col lg:flex-row gap-10 mt-20 ">
-      <div className="w-full lg:w-2/4 pl-7 space-y-5">
+      <div className="w-full lg:w-2/4 pl-10 space-y-5 overflow-hidden">
         <motion.div {...FadeLeft} {...ViewPort} className="relative text-lg">
           <div className="absolute top-0 -left-10 w-8 h-8 rounded-full bg-Green-1 " />
           But While NASA’s instruments have been quietly watching, they have
@@ -56,7 +56,7 @@ const ClimateInfo = () => {
           urgent call for humanity to respond to Earth’s distress signals.
         </motion.div>
       </div>
-      <div className="w-full lg:w-2/4">
+      <div className="w-full lg:w-2/4 overflow-hidden">
         <MotionImage
           {...FadeRight}
           {...ViewPort}
