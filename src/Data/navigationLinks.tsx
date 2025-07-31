@@ -1,8 +1,7 @@
 import { IconType } from "react-icons";
-import { BiHome } from "react-icons/bi";
-import { FcAbout, FcContacts } from "react-icons/fc";
-import { GrResources } from "react-icons/gr";
-import { MdPlayLesson } from "react-icons/md";
+import { CiCircleInfo } from "react-icons/ci";
+import { GoDatabase } from "react-icons/go";
+import { IoBookOutline, IoHomeOutline, IoPersonOutline } from "react-icons/io5";
 
 interface Links {
   title: string;
@@ -11,9 +10,9 @@ interface Links {
 }
 
 export const mainLinks: Links[] = [
-  { title: "Home", href: "/", icon: BiHome },
-  { title: "About", href: "/about", icon: FcAbout },
-  { title: "Lesson Plan", href: "/lesson", icon: MdPlayLesson},
-  { title: "Resources", href: "/resources", icon: GrResources },
-  { title: "Contact", href: "/contact", icon: FcContacts},
+  { title: "Home", href: "/", icon: IoHomeOutline },
+  { title: "About", href: "/about", icon: CiCircleInfo },
+  { title: "Lesson Plan", href: "/lesson", icon: IoBookOutline },
+  { title: "Resources", href: "/resources", icon: GoDatabase },
+  { title: "Contact", href: "/contact", icon: IoPersonOutline },
 ];
