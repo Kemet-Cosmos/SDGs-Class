@@ -1,5 +1,5 @@
 export const ViewPort = {
-  viewport: { once: true, amount: 0.5, margin: "-20px" },
+  viewport: { once: true, amount: 0.5, margin: "20px" },
   whileInView: { y: 0, x: 0, scale: 1, opacity: 1 },
 };
 export const Animate = {

@@ -5,6 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { FaArrowRight } from "react-icons/fa6";
 import { ViewPort, FadeLeft, FadeRight, FadeUp } from "@/Animation";
+import NextPage from "./ui/NextPage";
 
 const MotionImage = motion(Image);
 const MotionLink = motion(Link);
@@ -68,17 +69,7 @@ const Imagine = () => {
           Let’s find out what the SDGs truly are!
         </motion.div>
         <div className="w-full flex justify-end my-5">
-          <MotionLink
-            {...FadeUp}
-            {...ViewPort}
-            whileHover={{ translateX: 5, scale: 1.05 }}
-            whileTap={{ scale: 1 }}
-            href="/about"
-            className="font-bold text-2xl bg-Green-1 px-2 w-fit flex items-center gap-2  "
-          >
-            {" "}
-            NEXT <FaArrowRight size={20} />{" "}
-          </MotionLink>
+          <NextPage href="/about" />
         </div>
       </div>
     </section>
