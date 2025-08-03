@@ -3,13 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
-import { FaArrowRight } from "react-icons/fa6";
 import { ViewPort, FadeLeft, FadeRight, FadeUp } from "@/Animation";
 import NextPage from "./ui/NextPage";
-
 const MotionImage = motion(Image);
-const MotionLink = motion(Link);
-
 const Imagine = () => {
   return (
     <section className="flex flex-col lg:flex-row justify-center gap-10">
