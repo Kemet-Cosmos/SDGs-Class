@@ -1,8 +1,41 @@
 "use client";
-import React from "react";
+import React, { FormEvent, useState } from "react";
 import { motion } from "framer-motion";
 import { IoSend } from "react-icons/io5";
 export default function Page() {
+  const [success, setSuccess] = useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [Message, setMessage] = useState("");
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: "e7029218-643e-46ed-80a6-d305482adde0",
+        from: "SDGS class",
+        name,
+        email,
+        Message,
+      }),
+    });
+
+    const result = await response.json();
+    if (result.success) {
+      console.log("Message sent successfully!");
+      setName("");
+      setEmail("");
+      setMessage("");
+      setSuccess(true);
+    }
+  }
+
   return (
     <section className="mt-20 ">
       <div className="space-y-5">
@@ -16,7 +49,7 @@ export default function Page() {
         </p>
       </div>
       <form
-        action=""
+        onSubmit={handleSubmit}
         className="space-y-5 my-5 p-8 border border-Green-1 rounded-2xl"
       >
         <h1 className="text-4xl font-semibold">Send Us a Message</h1>
@@ -26,6 +59,8 @@ export default function Page() {
           </label>
           <input
             type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
             placeholder="ali ahmed ibrahim belal"
             required
             className="p-1  text-xl rounded-xl outline-none border border-Green-1 focus:ring focus:ring-Green-1 duration-150"
@@ -36,7 +71,9 @@ export default function Page() {
             Email Address
           </label>
           <input
-            type="text"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="yourname@gmail.com"
             required
             className="p-1  text-xl rounded-xl outline-none border border-Green-1 focus:ring focus:ring-Green-1 duration-150"
@@ -47,6 +84,8 @@ export default function Page() {
             Your Message
           </label>
           <textarea
+            value={Message}
+            onChange={(e) => setMessage(e.target.value)}
             placeholder="hi i like the idea and the website <3"
             required
             className="p-1  text-xl rounded-xl outline-none border border-Green-1 focus:ring focus:ring-Green-1 duration-150"
@@ -56,9 +95,11 @@ export default function Page() {
           <motion.button
             whileHover={{ scale: 1.05, x: 4 }}
             whileTap={{ scale: 1, x: 0 }}
+            type="submit"
             className="bg-Green-1 px-4 py-2 rounded-2xl text-2xl flex items-center gap-2"
           >
-            Send <IoSend size={25} />
+            {success ? "sended Successfully" : `Send `}
+            <IoSend size={25} />
           </motion.button>
         </div>
       </form>
